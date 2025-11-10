@@ -1,0 +1,11 @@
+[Unit]
+Description=Proxy HTTPS Meshtastic API to serial
+After=network.target
+
+[Service]
+ExecStart=/home/pi/meshtastic-proxy --serial-port /dev/ttyACM0 --port 8080 --cert /home/pi/server.crt --key /home/pi/server.key
+Restart=on-failure
+User=root
+
+[Install]
+WantedBy=multi-user.target

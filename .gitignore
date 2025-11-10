@@ -2,4 +2,23 @@ venv/
 *.crt
 *.key
 .claude/
- __pycache__/
+__pycache__/
+
+# Go build artifacts
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Go test binary, built with `go test -c`
+*.test
+
+# Go output binary
+*.out
+
+# Go dependency directories
+vendor/
+
+# Go build cache
+.cache/
